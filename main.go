@@ -165,12 +165,12 @@ func invokeTx(a *account.Account) {
 		rsp, err := a.AddInvokeTransaction(context.Background(), InvokeTx)
 		if err != nil {
 			fmt.Println(err)
-			time.Sleep(21 * time.Second)
+			time.Sleep(1 * time.Second)
 			continue
 		}
 
 		fmt.Println("tx: ", rsp.TransactionHash, " nonce: ", nonce)
-		time.Sleep(21 * time.Second)
+		time.Sleep(1 * time.Second)
 	}
 }
 
