@@ -109,7 +109,7 @@ func deployTx(pub string, a *account.Account) {
 		resp, err := a.AddDeployAccountTransaction(context.Background(), rpc.BroadcastDeployAccountTxn{DeployAccountTxn: tx})
 		if err != nil {
 			fmt.Println(err)
-			time.Sleep(10 * time.Second)
+			time.Sleep(5 * time.Second)
 			continue
 		}
 		fmt.Println("deployd: ", resp.ContractAddress)
@@ -165,7 +165,7 @@ func invokeTx(a *account.Account) {
 		rsp, err := a.AddInvokeTransaction(context.Background(), InvokeTx)
 		if err != nil {
 			fmt.Println(err)
-			time.Sleep(10 * time.Second)
+			time.Sleep(5 * time.Second)
 			continue
 		}
 
